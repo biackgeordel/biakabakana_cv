@@ -87,8 +87,46 @@ aside {
         font-size: 2rem;
       }
     }
+    .social-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      i {
+        flex: 0 0 50px;
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      p {
+        flex: auto;
+        margin: 0;
+      }
+    }
   }
 }
 main {
   grid-area: main;
+  padding: 5rem;
+  h2 {
+    margin-bottom: 4rem;
+  }
+  p {
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 5rem;
+  }
+  .experience {
+    display: flex;
+    .timeline {
+      flex: 0 0 50px;
+      border-right: 1px solid #ddd;
+      color: var(--hint);
+      padding-right: 1rem;
+      text-align: center;
+    }
+    .content {
+      flex: auto;
+      padding-left: 2rem;
+    }
+  }
 }

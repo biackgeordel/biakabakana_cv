@@ -43,6 +43,7 @@ p {
 .title-small {
   font-size: 1.8rem;
   letter-spacing: 0.5rem;
+  text-transform: uppercase;
 }
 
 .text-primary {
@@ -134,9 +135,47 @@ aside .block .stars-container i {
   padding: 0.5rem;
   font-size: 2rem;
 }
+aside .block .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+aside .block .social-container i {
+  flex: 0 0 50px;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+aside .block .social-container p {
+  flex: auto;
+  margin: 0;
+}
 
 main {
   grid-area: main;
+  padding: 5rem;
+}
+main h2 {
+  margin-bottom: 4rem;
+}
+main p {
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 5rem;
+}
+main .experience {
+  display: flex;
+}
+main .experience .timeline {
+  flex: 0 0 50px;
+  border-right: 1px solid #ddd;
+  color: var(--hint);
+  padding-right: 1rem;
+  text-align: center;
+}
+main .experience .content {
+  flex: auto;
+  padding-left: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

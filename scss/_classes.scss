@@ -8,3 +8,20 @@
 .text-primary {
   color: var(--primary);
 }
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.mb-5 {
+  margin-bottom: 5rem;
+}
+.mb-0 {
+  margin: 0;
+}
+//symbole d'une liste
+::marker {
+  color: var(--primary);
+  font-size: 2rem;
+}
+.text-hint {
+  color: var(--hint);
+}

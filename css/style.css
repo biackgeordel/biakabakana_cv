@@ -102,6 +102,12 @@ p {
   min-height: 100vh;
   grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px 1fr;
 }
+@media screen and (max-width: 500px) {
+  .grid-container {
+    grid: "header" auto "main" auto "aside" auto "picture" auto "footer" auto/1fr;
+    min-width: 100%;
+  }
+}
 
 .picture {
   grid-area: picture;
@@ -109,10 +115,20 @@ p {
   background: var(--background);
   border-right: 1px solid #ddd;
 }
+@media screen and (max-width: 500px) {
+  .picture {
+    padding: 3rem 2rem;
+  }
+}
 .picture img {
   border-radius: 50%;
   filter: grayscale(100);
   display: block;
+}
+@media screen and (max-width: 500px) {
+  .picture img {
+    margin: auto;
+  }
 }
 
 header {
@@ -126,11 +142,23 @@ header {
   color: white;
   background: linear-gradient(to right, var(--primary), var(--light));
 }
+@media screen and (max-width: 500px) {
+  header {
+    padding: 3rem 0;
+  }
+}
 header h1 {
   line-height: 8rem;
   letter-spacing: 1rem;
   font-size: 6rem;
   font-weight: 300;
+}
+@media screen and (max-width: 500px) {
+  header h1 {
+    line-height: 6rem;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+  }
 }
 header h1 span {
   display: inline-block;
@@ -147,6 +175,12 @@ aside {
   background: var(--background);
   border-right: 1px solid #ddd;
   padding: 5rem;
+}
+@media screen and (max-width: 500px) {
+  aside {
+    padding: 3rem 3rem;
+    maergin: auto;
+  }
 }
 aside .block {
   margin-bottom: 5rem;
@@ -219,32 +253,44 @@ main {
   grid-area: main;
   padding: 5rem;
 }
+@media screen and (max-width: 500px) {
+  main {
+    padding: 3rem 2rem;
+  }
+}
 main h2 {
   margin-bottom: 4rem;
 }
-main p {
+@media screen and (max-width: 500px) {
+  main h2 {
+    text-align: center;
+  }
+}
+
+p {
   line-height: 3rem;
   letter-spacing: 0.1rem;
 }
-main .experience {
+
+.experience {
   display: flex;
   margin: 6rem 0;
 }
-main .experience .timeline {
+.experience .timeline {
   flex: 0 0 50px;
   border-right: 1px solid #ddd;
   color: var(--hint);
   padding-right: 1rem;
   text-align: center;
 }
-main .experience .timeline p {
+.experience .timeline p {
   margin: 0;
 }
-main .experience .content {
+.experience .content {
   flex: auto;
   padding-left: 2rem;
 }
-main .experience ul {
+.experience ul {
   margin: 2rem 0;
   list-style: circle;
   padding-left: 4rem;
@@ -260,6 +306,11 @@ footer {
   justify-content: center;
   align-items: center;
   background: var(--text);
+}
+@media screen and (max-width: 500px) {
+  footer {
+    padding: 3rem 0;
+  }
 }
 footer h2 {
   margin-bottom: 3rem;
@@ -302,6 +353,11 @@ footer form input {
 footer form input::placeholder {
   color: var(--text);
   font-family: var(--fontFamily);
+}
+@media screen and (max-width: 500px) {
+  footer form input {
+    min-width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

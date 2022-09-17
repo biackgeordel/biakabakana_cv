@@ -1,0 +1,6 @@
+//pour des ecrans de petites tailles
+@mixin media-xs() {
+  @media screen and(max-width:500px) {
+    @content;
+  }
+}

@@ -2,6 +2,7 @@
 @import "bases";
 @import "classes";
 @import "animation";
+@import "mediaqueries";
 .grid-container {
   display: grid;
   min-height: 100vh;
@@ -10,6 +11,15 @@
     "picture header" auto
     "aside main" 1fr
     "footer footer" auto/ 350px 1fr;
+  @include media-xs {
+    grid:
+      "header" auto
+      "main" auto
+      "aside" auto
+      "picture" auto
+      "footer" auto/1fr;
+    min-width: 100%;
+  }
 }
 //declaration des différentes zones de la grille
 .picture {
@@ -17,11 +27,18 @@
   padding: 6rem;
   background: var(--background);
   border-right: 1px solid #ddd;
+  @include media-xs {
+    padding: 3rem 2rem;
+  }
+
   img {
     border-radius: 50%;
     // object-fit: cover;
     filter: grayscale(100);
     display: block;
+    @include media-xs {
+      margin: auto;
+    }
   }
 }
 header {
@@ -34,12 +51,20 @@ header {
   align-items: center;
   color: white;
   background: linear-gradient(to right, var(--primary), var(--light));
+  @include media-xs {
+    padding: 3rem 0;
+  }
 
   h1 {
     line-height: 8rem;
     letter-spacing: 1rem;
     font-size: 6rem;
     font-weight: 300;
+    @include media-xs {
+      line-height: 6rem;
+      letter-spacing: 1rem;
+      font-size: 4rem;
+    }
     span {
       display: inline-block;
       animation-name: bounce;
@@ -56,6 +81,10 @@ aside {
   background: var(--background);
   border-right: 1px solid #ddd;
   padding: 5rem;
+  @include media-xs {
+    padding: 3rem 3rem;
+    maergin: auto;
+  }
   .block {
     margin-bottom: 5rem;
     h3 {
@@ -127,38 +156,45 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
+  @include media-xs {
+    padding: 3rem 2rem;
+  }
   h2 {
     margin-bottom: 4rem;
-  }
-  p {
-    line-height: 3rem;
-    letter-spacing: 0.1rem;
-  }
-  .experience {
-    display: flex;
-    margin: 6rem 0;
-    .timeline {
-      flex: 0 0 50px;
-      border-right: 1px solid #ddd;
-      color: var(--hint);
-      padding-right: 1rem;
+    @include media-xs {
       text-align: center;
-      p {
-        margin: 0;
-      }
-    }
-    .content {
-      flex: auto;
-      padding-left: 2rem;
-    }
-    ul {
-      margin: 2rem 0;
-      list-style: circle;
-      padding-left: 4rem;
-      // color: var(--hint);
     }
   }
 }
+p {
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+}
+.experience {
+  display: flex;
+  margin: 6rem 0;
+  .timeline {
+    flex: 0 0 50px;
+    border-right: 1px solid #ddd;
+    color: var(--hint);
+    padding-right: 1rem;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
+  .content {
+    flex: auto;
+    padding-left: 2rem;
+  }
+  ul {
+    margin: 2rem 0;
+    list-style: circle;
+    padding-left: 4rem;
+    // color: var(--hint);
+  }
+}
+
 footer {
   grid-area: footer;
   color: white;
@@ -169,6 +205,9 @@ footer {
   justify-content: center;
   align-items: center;
   background: var(--text);
+  @include media-xs {
+    padding: 3rem 0;
+  }
   h2 {
     margin-bottom: 3rem;
   }
@@ -208,6 +247,9 @@ footer {
       &::placeholder {
         color: var(--text);
         font-family: var(--fontFamily);
+      }
+      @include media-xs {
+        min-width: auto;
       }
     }
   }

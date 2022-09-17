@@ -102,10 +102,15 @@ p {
   min-height: 100vh;
   grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px 1fr;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .grid-container {
     grid: "header" auto "main" auto "aside" auto "picture" auto "footer" auto/1fr;
     min-width: 100%;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 920px) {
+  .grid-container {
+    grid: "header header" auto "aside main" 1fr "picture picture" auto "footer footer" auto/250px 1fr;
   }
 }
 
@@ -115,7 +120,7 @@ p {
   background: var(--background);
   border-right: 1px solid #ddd;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .picture {
     padding: 3rem 2rem;
   }
@@ -125,7 +130,12 @@ p {
   filter: grayscale(100);
   display: block;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+  .picture img {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 920px) {
   .picture img {
     margin: auto;
   }
@@ -142,7 +152,7 @@ header {
   color: white;
   background: linear-gradient(to right, var(--primary), var(--light));
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   header {
     padding: 3rem 0;
   }
@@ -153,11 +163,16 @@ header h1 {
   font-size: 6rem;
   font-weight: 300;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   header h1 {
     line-height: 6rem;
     letter-spacing: 1rem;
     font-size: 4rem;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 550px) {
+  header h1 {
+    padding: 0 2.5rem;
   }
 }
 header h1 span {
@@ -176,10 +191,15 @@ aside {
   border-right: 1px solid #ddd;
   padding: 5rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   aside {
     padding: 3rem 3rem;
-    maergin: auto;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 920px) {
+  aside {
+    border-right: 0;
+    padding: 1.5rem;
   }
 }
 aside .block {
@@ -253,15 +273,20 @@ main {
   grid-area: main;
   padding: 5rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   main {
     padding: 3rem 2rem;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 920px) {
+  main {
+    padding: 3rem;
   }
 }
 main h2 {
   margin-bottom: 4rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   main h2 {
     text-align: center;
   }
@@ -307,7 +332,7 @@ footer {
   align-items: center;
   background: var(--text);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   footer {
     padding: 3rem 0;
   }
@@ -354,7 +379,7 @@ footer form input::placeholder {
   color: var(--text);
   font-family: var(--fontFamily);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   footer form input {
     min-width: auto;
   }

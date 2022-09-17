@@ -205,10 +205,12 @@
       </main>
       <footer>
         <h2 class="title-small">pour vous recontacter</h2>
-        <form action="">
+        <form name="contact" action="POST" data-netlify="true">
           <i class="far fa-envelope prefix"></i>
-          <input type="email" name="" placeholder="Votre email" id="" />
-          <button><i class="fas fa-paper-plane postfix"></i></button>
+          <input type="email" name="email" placeholder="Votre email" id="" />
+          <button type="submit">
+            <i class="fas fa-paper-plane postfix"></i>
+          </button>
         </form>
       </footer>
     </div>
